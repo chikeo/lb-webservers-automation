@@ -1,0 +1,34 @@
+- name:  Nginx Installation
+  hosts: webservers
+  gather_facts: yes
+  become: yes
+  roles:
+    - ufw-allow-port22
+    - ufw-allow-port80
+    - httpd
+  tags:
+    - ufw-allow-port22
+    - ufw-allow-port80
+    - httpd
+
+- name:  Server Hardening
+  hosts: webservers:loadbalancers
+  gather_facts: yes
+  become: yes
+  roles:
+    - sshd
+  tags:
+    - sshd
+
+- name: HAProxy Load Balancer Installation
+  hosts: loadbalancers
+  gather_facts: yes
+  become: yes
+  roles:
+    - ufw-allow-port22
+    - ufw-allow-port80
+    - haproxy
+  tags:
+    - ufw-allow-port22
+    - ufw-allow-port80
+    - haproxy
