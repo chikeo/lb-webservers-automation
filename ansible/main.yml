@@ -3,12 +3,8 @@
   gather_facts: yes
   become: yes
   roles:
-    - ufw-allow-port22
-    - ufw-allow-port80
     - httpd
   tags:
-    - ufw-allow-port22
-    - ufw-allow-port80
     - httpd
 
 - name:  Server Hardening
@@ -25,10 +21,6 @@
   gather_facts: yes
   become: yes
   roles:
-    - ufw-allow-port22
-    - ufw-allow-port80
     - haproxy
   tags:
-    - ufw-allow-port22
-    - ufw-allow-port80
     - haproxy

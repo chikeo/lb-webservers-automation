@@ -1,5 +1,5 @@
 [webservers]
-18.221.247.116 ansible_connection=ssh ansible_ssh_user=ubuntu
-3.17.4.252 ansible_connection=ssh ansible_ssh_user=ubuntu
+3.17.69.194 ansible_connection=ssh ansible_ssh_user=ubuntu
+18.222.183.23 ansible_connection=ssh ansible_ssh_user=ubuntu
 [loadbalancers]
-3.16.147.95 ansible_connection=ssh ansible_ssh_user=ubuntu
+18.223.33.6 ansible_connection=ssh ansible_ssh_user=ubuntu
