@@ -1,7 +1,7 @@
 ---
 
 - name: Enable Firewall UFW
-  shell: echo "y" | sudo ufw enable
+  shell: echo "y" | ufw enable
 
 - name: Open up Admin port 22
-  shell: sudo ufw allow 22
+  shell: ufw allow 22
